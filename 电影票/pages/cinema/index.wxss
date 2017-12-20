@@ -1,0 +1,57 @@
+/*index.wxss*/
+/*电影信息的样式*/
+.item{
+  padding: 10px;
+  width: 100%;
+  
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: row;
+}
+
+.item_middle{
+   height: 80px;
+   width: 80%; 
+   position: relative;
+}
+/*中间字体部分*/
+.item_middle .title{
+   margin-left: 10px; 
+  font-size: 16px;
+  color: #333;
+  white-space: nowrap;
+}
+.item_middle .subTitle{
+  display: block; 
+  font-size: 12px;
+  color: #666;
+  margin: 2px 0px;
+  margin-left: 10px;
+}
+.item .item_middle .tag{
+border: 1px solid #29cc6d;
+  border-radius: 2px;
+  color: #29cc6d;
+  padding: 2px 4px;
+  font-size: 12px;
+
+  text-align: left;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+}
+
+/*右边部分*/
+.item_right{
+ position:relative;
+  width: 20%;
+  margin-left: 30px;
+}
+.item_right .price{
+  font-size: 12px;
+  color: #cf616a;
+  white-space: nowrap;
+  position:absolute;
+  top:0px;
+  right:10px;
+}

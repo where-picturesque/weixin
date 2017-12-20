@@ -1,0 +1,25 @@
+<view class="container">
+
+  <!--当请求数据进行加载时-->
+  <loading hidden="{{loading}}">亲，稍安勿躁...</loading>
+
+  <!--背景图-->
+  <image src="{{moviesDetail.images.large}}" class="background" mode="aspectFill"></image>
+  <scroll-view class="container" scroll-y="true" wx:if="{{moviesDetail.title}}">
+    <view class="meta">
+
+      <!--电影图-->
+      <image src="{{moviesDetail.images.large}}" mode="aspectFit" class="poster"></image>
+
+      <!--电影名字与评分-->
+      <text class="title">{{moviesDetail.title}}({{moviesDetail.year}})</text>
+     <text class="info">评分:{{moviesDetail.rating.average}}</text>
+      <text class="info">导演：<block wx:for="{{moviesDetail.directors}} " wx:key="moviesDetail.id">{{item.name}}</block></text>
+      <text class="info">主演:<block wx:for="{{moviesDetail.casts}}" wx:key="moviesDetail.id">{{item.name}}</block></text>
+    </view>
+    <view class="summary">
+      <text class="label">摘要:</text>
+      <text class="content">{{moviesDetail.summary}}</text>
+    </view>
+  </scroll-view>
+</view>

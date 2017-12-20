@@ -1,0 +1,26 @@
+
+<!--index.wxml-->
+<view class="container">
+
+  <!--影院信息部分-->
+  <block wx:for-items="{{items}}" wx:for-item="item">
+    <view class="item">
+      <!--左边部分-->
+      <view class="item_middle">
+        <!--影院名-->      
+          <text class="title">{{item.title}}</text>     
+        <!--影院地址-->     
+          <text class="subTitle">{{item.subTitle}}</text>     
+        <!--影院标记-->     
+          <text class="tag">{{item.tag}}</text>
+      </view>
+      <!--右边部分-->
+      <view class="item_right">
+        <view>
+        <!--票价-->
+          <text class="price">{{item.price}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

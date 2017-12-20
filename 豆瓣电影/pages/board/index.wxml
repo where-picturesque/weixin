@@ -1,0 +1,86 @@
+
+<!--index.wxml-->
+
+<!--可滚动视图区域 scroll-y="true" 允许竖向滚动-->
+<scroll-view class="container" scroll-y="true">
+
+  <!--轮播图   wx:for-item="item" item表示变量名-->
+  <swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+    <!--<navigator url="../detail/detail?id={{item.id}}" hover-class="none" class="movies-it">-->
+      <swiper-item wx:for="{{sliderData}}" wx:key="id" wx:for-item="item">
+
+        <!--mode="aspectFill"图片剪裁样式保持纵横比 image src="{{item.large}}" 后台图片名赋值 -->
+        <image src="{{item.large}}" mode="aspectFill"></image>
+      </swiper-item>
+    <!--</navigator>-->
+  </swiper>
+
+  <!--电影信息 下一行可有可无-->
+
+  <!--<view class="board" scroll-y="true">-->
+
+  <!--正在上映-->
+  <view class="board-item">
+    <view class="title">
+      <text>正在上映</text>
+    </view>
+
+    <!--横向滑动-->
+    <scroll-view class="content" scroll-x="true">
+      <view class="inner">
+
+        <!--电影信息部分 页面跳转到详情页 使用navigator  页面之间的传参 传递id值-->
+        <navigator url="../detail/detail?id={{item.id}}" hover-class="none" class="movies-item" wx:for="{{moviesOn}}">
+          <view>
+            <image src="{{item.large}}" mode="aspectFill"></image>
+            <text>{{item.title}}</text>
+          </view>
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!--</view>-->
+
+  <!--即将上映-->
+  <view class="board-item">
+    <view class="title">
+      <text>即将上映</text>
+    </view>
+
+    <!--横向滑动-->
+    <scroll-view class="content" scroll-x="true">
+      <view class="inner">
+
+        <!--电影信息部分 页面跳转到详情页 使用navigator-->
+        <navigator url="../detail/detail?id={{item.id}}" hover-class="none" class="movies-item" wx:for="{{movieswillOn}}">
+          <view>
+            <image src="{{item.large}}" mode="aspectFill"></image>
+            <text>{{item.title}}</text>
+          </view>
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!--top250-->
+  <view class="board-item">
+    <view class="title">
+      <text>经典电影</text>
+    </view>
+
+    <!--横向滑动-->
+    <scroll-view class="content" scroll-x="true">
+      <view class="inner">
+
+        <!--电影信息部分 页面跳转到详情页 使用navigator-->
+        <navigator url="../detail/detail?id={{item.id}}" hover-class="none" class="movies-item" wx:for="{{moviesTop}}">
+          <view>
+            <image src="{{item.large}}" mode="aspectFill"></image>
+            <text>{{item.title}}</text>
+          </view>
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+</scroll-view>

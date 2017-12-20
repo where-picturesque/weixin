@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/cinema/index",
+    "pages/my/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "电影票",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":true
+  },
+  "tabBar": {
+    "color": "#ddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "上映",
+      "iconPath": "image/icon_normal.png",
+      "selectedIconPath": "image/icon_pressed.png"
+    },
+    {
+      "pagePath": "pages/cinema/index",
+      "text": "影院",
+      "iconPath": "image/icon_normal.png",
+      "selectedIconPath": "image/icon_pressed.png"
+    },
+     {
+      "pagePath": "pages/my/index",
+      "text": "我的",
+      "iconPath": "image/icon_normal.png",
+      "selectedIconPath": "image/icon_pressed.png"
+    }
+
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+/*轮播图样式*/
+swiper-item {
+ height: 380rpx;
+}
+swiper-item image {
+  width: 750rpx;
+  height: 380rpx;
+}
+
+/*上映样式*/
+
+.board{
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+}
+ .board-item {
+  /*display: flex;
+  flex-direction: column;*/
+  /*添加手指*/
+  cursor: pointer;
+  font-size: 20rpx;
+  margin: 40rpx 0;
+  padding: 20rpx;
+background-color: #fff;
+  
+}
+.board-item .title{
+  display: flex;
+  margin-bottom: 10rpx;
+  width: 100%;
+}
+/*设置图片高度*/
+.board-item .content{
+  height: 300rpx;
+}
+/*电影间横向排列*/
+.board-item .content .inner{
+  display: flex;
+  flex-direction: rows;
+  height: 300rpx;
+  width: 900rpx;
+}
+
+/*每个电影中电影图片和电影名竖向排列*/
+.board-item .content .inner .movies-item {
+width: 180rpx;
+margin: 10rpx;
+  display: flex;
+  flex-direction: column;
+}
+/*设置图片大小*/
+.board-item .content .inner .movies-item image{
+  width: 180rpx;
+  height: 250rpx;
+}
+/*设置电影下面的文字样式*/
+.board-item .content .inner .movies-item text{
+  margin: 20rpx;
+  overflow: hidden;
+  /*文本不换行*/
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 20rpx;
+}
+
+

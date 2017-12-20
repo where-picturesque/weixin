@@ -1,0 +1,46 @@
+<scroll-view class="container" scroll-y="true">
+<!--背景图片-->
+<!--<image src="../../images/tu.jpg" class="background" mode="aspectFill"></image>-->
+<!--头像-->
+<view id="header">
+  <view class="content">
+
+    <!--微信头像-->
+    <image src="{{userInfo.avatarUrl}}"></image>
+
+    <!--微信名-->
+    <view class="nickName">{{userInfo.nickName}}</view>
+
+    <!--省份-->
+    <view class="orther">{{userInfo.province}}</view>
+  </view>
+</view>
+
+<!--中间横向标题-->
+<view id="section">
+  <view class="flex-wrap">
+    <view class="flex-item" wx:for="{{x_menus}}">
+      <view>
+        <image src="{{item.icon}}" class="icon"></image>
+      </view>
+      <!--标题-->
+      <view class="menu_titile">
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--竖向标题-->
+<view id="menus">
+  <view class="content" wx:for="{{y_menus}}">
+    <view class="view">
+      <text>{{item.title}}</text>
+    </view>
+    <view class="right">
+      <image src="../../images/rightjian.png" style="width:14px;height:14px;"></image>
+    </view>
+  </view>
+</view>
+
+</scroll-view>

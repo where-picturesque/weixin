@@ -1,0 +1,33 @@
+
+<!--设置样式-->
+<template name="movie-list">
+  <scroll-view scroll-y="true" class="list">
+    <template is="{{'item1'}}" data="{{item}}" wx:for="{{movies}}" wx:key="id"></template>
+  </scroll-view>
+</template>
+
+<!--实现item1-->
+<template name="item1">
+
+  <!--需跳转至详情页-->
+  <navigator url="../doudetail/doudetail?id={{item.id}}">
+
+    <view class="item">
+        <!--电影图片-->
+      <image src="{{item.images.small}}" class="poster"></image>
+
+      <!--电影详情-->
+      <view class="meta">
+        <text class="title">{{item.title}}</text>
+        <text class="sub-titile">{{item.original_title}}</text>
+        <text class="artists">导演：<block wx:for="{{item.directors}} " wx:key="item.id">{{item.name}}</block>
+        </text>
+      </view>
+
+      <!--评分-->
+      <view class="rating">
+        <text>{{item.rating.average}}</text>
+      </view>
+    </view>
+  </navigator>
+</template>
