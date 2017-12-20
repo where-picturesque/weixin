@@ -1,0 +1,14 @@
+/**index.wxss**/
+video{
+  width: 100%;
+}
+/*输入框样式*/
+input{
+  margin: 30rpx;
+  border: solid #ccc; 
+}
+/*按钮样式*/
+button{
+  margin: 10rpx 20rpx;
+  background-color: lightgoldenrodyellow;
+}

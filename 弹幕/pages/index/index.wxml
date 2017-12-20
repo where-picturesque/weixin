@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+<!--video标签-->
+<video id="myVideo" src="http://oo9wq61n2.bkt.clouddn.com/tes" danmu-list="{{danmuList}}" enable-danmu="true" danmu-btn="true" controls="controls" ></video>
+<view class="btn-area">
+<!--输入框失去焦点时调用bindblur，placeholder占位符-->
+<input bindblur="bindInput" placeholder="请输入弹幕"  />
+<!--按钮发送弹幕绑定bindtap，触发"bindSendDanmu"-->
+<button bindtap="bindSendDanmu">发送弹幕</button>
+
+</view>
+</view>

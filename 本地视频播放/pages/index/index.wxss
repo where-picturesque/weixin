@@ -1,0 +1,8 @@
+/**index.wxss**/
+video{
+  width:100%;
+}
+button{
+  margin: 20rpx;
+  background-color: lawngreen;
+}

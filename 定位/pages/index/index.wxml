@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="container">
+<!--按钮-->
+  <button type="primary" bindtap="bindLocation">定位当前位置并打开内置地图</button>
+</view>

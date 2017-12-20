@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+
+<!--本地视频-->
+<video src="{{src}}"></video>
+<!--按钮-->
+<button bindtap="bindButton">获取视频</button>
+</view>
